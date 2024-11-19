@@ -1,0 +1,327 @@
+/* Restabliment i estil global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estil del cos del document */
+body {
+    font-family: Arial, sans-serif;
+    background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+    color: white;
+    overflow-x: hidden;
+    min-height: 100vh; /* Assegura que cobreix tota la pantalla */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estils de la navegació - Cosmic */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 10px 0;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+}
+
+nav li a:hover {
+    background: linear-gradient(90deg, #ff00cc, #3333ff);
+    color: black;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 0, 204, 0.8);
+}
+
+nav ul li a.active {
+    background: linear-gradient(90deg, #ff00cc, #3333ff);
+    color: black;
+    font-weight: bold;
+    box-shadow: 0 0 15px rgba(255, 0, 204, 0.8);
+}
+
+/* Bloc (contenidor semi-transparent) */
+main {
+    flex: 1; /* Ocupa tot l'espai disponible */
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+}
+
+.block {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    padding: 50px;
+    max-width: 800px;
+    margin: 20px auto;
+    color: white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    position: relative; 
+    left: -10%; /* Desplaça a l'esquerra un 10% */
+}
+
+.blockabout {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    padding: 50px;
+    max-width: 800px;
+    margin: 20px auto;
+    color: white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    position: relative; 
+}
+
+.blockscript {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    padding: 50px;
+    max-width: 800px;
+    margin: 20px auto;
+    color: white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+/* Graella d'imatges per a la galeria */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    padding: 20px;
+    justify-content: center; 
+}
+
+.image-grid img {
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 10px; 
+    transition: transform 0.3s;
+}
+
+.image-grid img:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.3); 
+}
+
+/* Peu de pàgina */
+footer {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    backdrop-filter: blur(10px);
+}
+
+/* Fons d'estrelles còsmiques */
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.star {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: white;
+    border-radius: 50%;
+    animation: fall 10s linear infinite;
+}
+
+/* Animacions de les estrelles */
+@keyframes fall {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) translateX(100vw);
+        opacity: 0;
+    }
+}
+
+/* Títols de secció */
+h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Vista prèvia d'imatge ampliada */
+.image-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 15%;
+    right: 10%;
+    max-width: 500px; /* Estableix una amplada estàndard per al contenidor */
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    color: white;
+}
+
+.image-preview img {
+    width: 100%; /* S'ajusta automàticament al contenidor */
+    height: auto; /* Manté la proporció d'aspecte */
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Text dins de la vista prèvia */
+.image-preview h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.image-preview p {
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+/* Amaga el contenidor de vista prèvia inicialment */
+.image-preview {
+    display: none;
+}
+
+/* Rellotge */
+.clock {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    color: #ff00cc;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 0, 204, 0.3);
+    text-align: center;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.clock:hover {
+    transform: scale(1.1);
+    background: linear-gradient(90deg, #ff00cc, #3333ff);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(255, 0, 204, 0.6);
+}
+
+/* Estil inicial del text ocult */
+.hidden-text {
+    display: none;
+    color: white;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/* Estils per a l'estat destacat */
+.blockscript.highlighted {
+    background-color: purple; 
+    color: white; 
+    font-family: 'Comic Sans MS', cursive, sans-serif; 
+    font-size: 1.2rem; 
+    font-style: italic; 
+    text-shadow: 2px 2px 5px #ff00cc; 
+    letter-spacing: 2px; 
+    transition: background-color 0.3s ease, color 0.3s ease, font-family 0.3s ease, text-shadow 0.3s ease; /* Transicions suaus */
+}
+
+.blockscript .hidden-text.visible {
+    display: block; /* Mostra el text */
+}
+
+/* Estil del contenidor de contrasenya */
+.password-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+/* Camp d'entrada de contrasenya */
+.password-container input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Estil del botó de commutació */
+.toggle-password {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.toggle-password:hover {
+    color: #ff00cc;
+}
+
+/* Botó còsmic */
+.cosmic-button {
+    background: linear-gradient(90deg, #ff00cc, #3333ff);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cosmic-button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(90deg, #3333ff, #ff00cc);
+    box-shadow: 0 8px 20px rgba(255, 0, 204, 0.6);
+}
+
+.cosmic-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}

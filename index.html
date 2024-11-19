@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pàgina d'Inici - ASIX5</title>
+    <link rel="stylesheet" href="estils.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="stars">
+        <div class="star"></div>
+    </div>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Inici</a></li>
+                <li><a href="scripts.html">Validació de Text</a></li>
+                <li><a href="about.html">Validació de Contrasenyes</a></li>
+            </ul>
+        </nav>
+        <div id="clock" class="clock"></div>
+    </header>
+    <!-- Contingut principal -->
+    <main>
+        <div class="block">
+            <h2>Galeria d’Imatges</h2>
+            <div class="image-grid">
+                <img src="img/afgan.webp" alt="Llebrer Afganès" onclick="showImage('img/afgan.webp', 'Llebrer Afganès', 'Aquest és un Llebrer Afganès, un gos de gran bellesa i elegància.')">
+                <img src="img/terrier.jpg" alt="Terrier" onclick="showImage('img/terrier.jpg', 'Terrier', 'El Terrier és conegut pel seu caràcter actiu i juganer.')">
+                <img src="img/akita.jpg" alt="Akita" onclick="showImage('img/akita.jpg', 'Akita', 'L’Akita és un gos lleial i majestuós originari del Japó.')">
+                <img src="img/bulldog.jpg" alt="Bulldog" onclick="showImage('img/bulldog.jpg', 'Bulldog', 'El Bulldog és un gos amistós i ideal per a famílies.')">
+                <img src="img/golden.png" alt="Golden Retriever" onclick="showImage('img/golden.png', 'Golden Retriever', 'El Golden Retriever és conegut per la seva intel·ligència i temperament amable.')">
+                <img src="img/pastor.png" alt="Pastor Alemany" onclick="showImage('img/pastor.png', 'Pastor Alemany', 'El Pastor Alemany és un gos versàtil i lleial, sovint utilitzat en tasques de treball i com a mascota familiar.')">
+            </div>
+            <!-- Contenidor per a la imatge ampliada -->
+            <div id="image-preview" class="image-preview">
+                <img id="preview-img" src="" alt="Imatge ampliada">
+                <h3 id="preview-title"></h3>
+                <p id="preview-text"></p>
+            </div>
+        </div>
+    </main>
+    <!-- Peu de pàgina -->
+    <footer>
+        <p>&copy; 2024 Vitaliy</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validació de Contrasenyes - ASIX5</title>
+    <link rel="stylesheet" href="estils.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="stars">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+    </div>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inici</a></li>
+                <li><a href="scripts.html">Validació de Text</a></li>
+                <li><a href="about.html" class="active">Validació de Contrasenyes</a></li>
+            </ul>
+        </nav>
+        <div id="clock" class="clock"></div>
+    </header>
+    <main>
+        <div class="blockabout">
+            <h2>Validació de Contrasenyes</h2>
+            <form id="passwordForm">
+                <label for="password1">Contrasenya:</label>
+                <div class="password-container">
+                    <input type="password" id="password1" required minlength="8">
+                    <button type="button" class="toggle-password" onclick="togglePasswordVisibility('password1', this)">
+                        <span class="eye-icon">🙈</span>
+                    </button>
+                </div>
+                <label for="password2">Repeteix la Contrasenya:</label>
+                <div class="password-container">
+                    <input type="password" id="password2" required minlength="8">
+                    <button type="button" class="toggle-password" onclick="togglePasswordVisibility('password2', this)">
+                        <span class="eye-icon">🙈</span>
+                    </button>
+                </div>
+                <button type="button" class="cosmic-button" onclick="validatePassword()">Enviar</button>
+            </form>
+        </div>        
+    </main>
+    <footer>
+        <p>&copy; 2024 Vitaliy</p>
+    </footer>
+</body>
+
+</html>
